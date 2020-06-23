@@ -12,7 +12,7 @@ class LoadWeaterByNameUseCaseImpl(
     override suspend fun loadWeatherBycity(cityName: String): WeatherDetail {
         val response = api.getWeatherByCityName(
             cityName,
-            1,
+            2,
             "pt",
             "BR",
             BuildConfig.API_KEY
@@ -20,7 +20,7 @@ class LoadWeaterByNameUseCaseImpl(
         if (response.code() == 204) {
             throw NoContentException()
         }
-        val dataItem = response.body()!!.data.first()
+        val dataItem = response.body()!!.data.last()
 
         return WeatherDetail(
             minTemp = dataItem.minTemp,
