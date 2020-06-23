@@ -7,6 +7,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="@string/sub_title_detail"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/forecastImage"
             android:layout_width="wrap_content"
@@ -31,8 +41,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            tools:text="Poucas nuvens"
             app:layout_constraintStart_toStartOf="@+id/minMaxtempTextView"
-            app:layout_constraintTop_toBottomOf="@+id/minMaxtempTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/minMaxtempTextView"
+            tools:text="Poucas nuvens" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

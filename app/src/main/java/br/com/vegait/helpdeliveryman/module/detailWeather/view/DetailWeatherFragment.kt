@@ -23,8 +23,16 @@ class DetailWeatherFragment : BaseFragment<FragmentDetailCityWeatherBinding>() {
 
     private fun FragmentDetailCityWeatherBinding.setupScreen(weatherDetail: WeatherDetail) {
         descriptionForecastTextView.text = weatherDetail.description
-        minMaxtempTextView.text =
-            getString(R.string.min_max_label, weatherDetail.minTemp, weatherDetail.maxTemp)
+        subtitle.text = getString(
+            R.string.sub_title_detail,
+            weatherDetail.dateSearch
+        )
+
+        minMaxtempTextView.text = getString(
+            R.string.min_max_label,
+            weatherDetail.minTemp,
+            weatherDetail.maxTemp
+        )
         val linkImage = getString(R.string.load_image, BuildConfig.BASE_URL_IMG, weatherDetail.icon)
         Glide.with(this@DetailWeatherFragment)
             .load(linkImage)

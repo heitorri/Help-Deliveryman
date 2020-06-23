@@ -4,6 +4,7 @@ import br.com.vegait.helpdeliveryman.BuildConfig
 import br.com.vegait.helpdeliveryman.data.api.WeatherApi
 import br.com.vegait.helpdeliveryman.data.model.WeatherDetail
 import br.com.vegait.helpdeliveryman.domain.exception.NoContentException
+import br.com.vegait.helpdeliveryman.util.getFormattedDateDayMonth
 
 class LoadWeaterByNameUseCaseImpl(
     private val api: WeatherApi
@@ -26,7 +27,8 @@ class LoadWeaterByNameUseCaseImpl(
             minTemp = dataItem.minTemp,
             maxTemp = dataItem.maxTemp,
             description = dataItem.weather.description,
-            icon = dataItem.weather.icon
+            icon = dataItem.weather.icon,
+            dateSearch = dataItem.date.getFormattedDateDayMonth()
         )
     }
 }

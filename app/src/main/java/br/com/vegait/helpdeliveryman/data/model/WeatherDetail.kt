@@ -8,5 +8,6 @@ data class WeatherDetail(
     val icon: String,
     val description: String,
     val minTemp: String,
-    val maxTemp: String
+    val maxTemp: String,
+    val dateSearch: String
 ) : Parcelable

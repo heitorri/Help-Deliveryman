@@ -1,6 +1,7 @@
 package br.com.vegait.helpdeliveryman.data.model
 
 import com.google.gson.annotations.SerializedName
+import java.util.*
 
 data class WeatherResponse(
     @SerializedName("country_code")

@@ -7,4 +7,5 @@
     <string name="default_error">Ops, ocorreu um erro na API</string>
     <string name="load_image">%1s%2s.png</string>
     <string name="min_max_label">Mínima: %1sC˚ Máxima: %2sC˚</string>
+    <string name="sub_title_detail">Previsão do tempo referente ao dia %s</string>
 </resources>
