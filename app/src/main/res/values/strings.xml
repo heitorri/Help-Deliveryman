@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Help Deliveryman</string>
+    <string name="label_city_search_edit_text">Cidade</string>
+    <string name="label_find_button">Buscar</string>
+    <string name="error_field_empty">O campo não pode ser vazio</string>
+    <string name="error_204">Apenas cidades Brasileiras são permitidas, verifique se o nome está escrito corretamente</string>
+    <string name="default_error">Ops, ocorreu um erro na API</string>
+    <string name="load_image">%1s%2s.png</string>
+    <string name="min_max_label">Mínima: %1sC˚ Máxima: %2sC˚</string>
+</resources>

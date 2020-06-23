@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_weather"
+    app:startDestination="@id/search_by_city">
+    <fragment
+        android:id="@+id/search_by_city"
+        android:name="br.com.vegait.helpdeliveryman.module.searchCityWeather.view.SearchCityWeatherFragment"
+        tools:layout="@layout/fragment_search_city">
+
+        <action
+            android:id="@+id/action_search_by_city_to_detail_weather_city"
+            app:destination="@id/detail_weather_city" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_weather_city"
+        android:name="br.com.vegait.helpdeliveryman.module.detailWeather.view.DetailWeatherFragment"
+        tools:layout="@layout/fragment_detail_city_weather">
+        <argument
+            android:name="weatherDetail"
+            app:argType="br.com.vegait.helpdeliveryman.data.model.WeatherDetail"
+            app:nullable="false" />
+    </fragment>
+</navigation>
